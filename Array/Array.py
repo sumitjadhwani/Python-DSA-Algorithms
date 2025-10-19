@@ -83,6 +83,20 @@ print(heros)
 
 heros.sort()
 print(heros)
+
+
 '''
 Create a list of all odd numbers between 1 and a max number. Max number is something you need to take from a user using input() function
 '''
+
+
+def odd_number(max_number):
+    odd_numbers = []
+    for i in range(1,max_number+1):
+        if i%2 != 0:
+            odd_numbers.append(i)
+    return odd_numbers
+
+max_number = input("Enter max_number to generate odd numbers: ")
+res = odd_number(int(max_number))
+print(res)
