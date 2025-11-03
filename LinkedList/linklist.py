@@ -74,8 +74,16 @@ class LinkedList:
         
 
     def detect_loop(self):
-         
-        pass
+        slow = self.Head
+        fast = self.Head
+
+        while fast and fast.Next:
+            slow = slow.Next
+            fast = fast.Next.Next
+            if slow == fast:
+                return True
+
+        return False
 
 
 
